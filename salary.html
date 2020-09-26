@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+  <style type="">
+    
+#submit{
+  background-color: #555;
+  height: 50px;
+  width: 100px;
+  display:block;
+  color: white;
+  text-align: center;
+}
+
+  </style>
+ 
+</head>
+<body>
+  <center>
+  <h1>Salary Calculate</h1>
+  <form method="post" action="">
+    <div>
+      <p>Employee Type</p>
+      <select>
+       
+        <option>manager</option>
+        <option>salesman</option>
+
+      </select>
+        <p>Working Days</p>
+     <input id ="wd" type="number" name="">
+     <h2>Total salary:</h2> 
+     <h3></h3>
+
+       <input id="submit" value="submit">
+    </div>
+   
+
+     
+      
+   
+
+  </form>
+  <br><br>
+  <a href="index.php"><b>Back to Home</b></a>
+  </center>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   
+   $('input#submit').click(function(){
+
+     var type=$('select').val();
+     var work=$('input#wd').val();
+   
+
+
+
+     if(type=='manager'){
+
+       $('h3').text(work*1000);
+
+
+   }
+   else{
+
+     $('h3').text(work*500);
+
+
+   }
+   });
+
+  
+  </script>
+  
+</body>
+</html>
